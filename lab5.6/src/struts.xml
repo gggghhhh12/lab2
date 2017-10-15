@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" 
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+   <package name="myStruts2" namespace="/" extends="struts-default">
+   <action name="loginaction"  class="com.slw.action.serch" method="execute">
+       <result name="success">/success.jsp</result>
+       <result name="error">/error.jsp</result>
+   </action>
+   <!--上面的longinaction连接搜索操作，成功返回到success.jsp页面，失败返回error.jsp页面 -->
+   <action name="show"  class="com.slw.action.show" method="showexecute">
+       <result name="showsuccess">/showsuccess.jsp</result>
+       <result name="showerror">/showerror.jsp</result>
+   </action>
+   <!--上面的show连接书名，成功返回到showsuccess.jsp页面，显示书的详细信息，失败返回showerror.jsp页面 -->
+    <action name="del"  class="com.slw.action.delete" method="deleteexecute">
+       <result name="deletesuccess">/index.jsp</result>
+       <result name="dekleteerror">/dekleteerror.jsp</result>
+   </action>
+    <!--上面的del连接删除按钮，成功返回到index.jsp页，失败返回dekleteerror.jsp页面显示删除失败 -->
+   </package>
+</struts>
